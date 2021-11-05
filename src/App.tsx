@@ -2,6 +2,7 @@ import MyComponent from "./Components/MyComponent";
 import Counter from "./Components/Counter";
 import Say from "./Components/Say";
 import EventPractice from "./Components/EventPractice";
+import ValidationSample from "./Components/ValidationSample";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       <br />
       ----
       <EventPractice />
+      <br />
+      ---
+      <ValidationSample />
     </div>
   );
 }
