@@ -1,5 +1,6 @@
 import MyComponent from "./Components/MyComponent";
 import Counter from "./Components/Counter";
+import Say from "./Components/Say";
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       </MyComponent>
       <br />
       <Counter />
+      <br />
+      <Say />
     </div>
   );
 }
