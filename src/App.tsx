@@ -4,6 +4,7 @@ import Say from "./Components/Say";
 import EventPractice from "./Components/EventPractice";
 import ValidationSample from "./Components/ValidationSample";
 import IterationSample from "./Components/IterationSample";
+import ScrollBox from "./Components/ScrollBox";
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
       ---
       <br />
       <IterationSample />
+      <br />
+      ---
+      <div>
+        <ScrollBox />
+        <button>맨아래로</button>
+        <br />
+        <br />
+      </div>
     </div>
   );
 }
