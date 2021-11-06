@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../CSS/ValidationSample.css";
 
-type propsCheck = {
+type DemoData = {
   password: string;
   clicked: boolean;
   validated: boolean;
 };
 
 const ValidationSample = () => {
-  const [vali, setVali] = useState<propsCheck>({
+  const $input = useRef<HTMLInputElement>(null);
+  const [vali, setVali] = useState<DemoData>({
     password: "",
     clicked: false,
     validated: false,
@@ -17,25 +18,36 @@ const ValidationSample = () => {
   const { password, clicked, validated } = vali;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const nextVali = {
-      ...vali,
-      [e.target.name]: e.target.value,
-    };
-    setVali(nextVali);
+    setVali(
+      (prev) =>
+        (prev = {
+          ...prev,
+          [e.target.name]: e.target.value,
+        }),
+    );
   };
 
   const handleButtonClick = () => {
-    const nextCheck = {
-      ...vali,
-      clicked: true,
-      validated: password === "0000",
-    };
-    setVali(nextCheck);
+    setVali(
+      (prev) =>
+        (prev = {
+          ...prev,
+          clicked: true,
+          validated: password === "0000",
+        }),
+    );
   };
+
+  useEffect(() => {
+    if ($input.current !== null) {
+      $input.current?.focus();
+    }
+  });
 
   return (
     <div>
       <input
+        ref={$input}
         type="password"
         name="password"
         value={password}

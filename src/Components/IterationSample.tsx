@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 
-type propTypes = {
+// 유니크 키는 벜츄얼 돔의 비교를 편하게 하기위해서사용한다.
+
+// 1. 렌더 트리 안의 html 엘리먼트를 찾아서 레프를 사용하고 싶을대
+// 2. 추적이 필요없는 값을 사용하고 싶을때
+
+type DemoData = {
   id: number;
   text: string;
 };
 
 const IterationSample = () => {
-  const [names, setNames] = useState<propTypes[]>([
+  const [names, setNames] = useState<DemoData[]>([
     { id: 1, text: "눈사람" },
     { id: 2, text: "얼음" },
     { id: 3, text: "눈" },
@@ -21,12 +26,9 @@ const IterationSample = () => {
   };
 
   const addValue = () => {
-    const nextNames = names.concat({
-      id: nextId,
-      text: inputText,
-    });
-    setNextId(nextId + 1);
-    setNames(nextNames);
+    const id = nextId + 1;
+    setNextId(id);
+    setNames((prev) => prev.concat({ id, text: inputText }));
     setInputText("");
   };
 
