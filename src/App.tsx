@@ -7,6 +7,7 @@ import IterationSample from "./Components/IterationSample";
 import Counter2 from "./Components/Counter2";
 import Info from "./Components/Info";
 import { useState } from "react";
+import Counter3 from "./Components/Counter3";
 
 function App() {
   const [visible, setVisible] = useState<boolean>(false);
@@ -46,6 +47,9 @@ function App() {
         <hr />
         {visible && <Info />}
       </div>
+      <br />
+      <br />
+      <Counter3 />
     </div>
   );
 }

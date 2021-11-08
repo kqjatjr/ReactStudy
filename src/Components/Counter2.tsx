@@ -8,7 +8,7 @@ const Counter2 = () => {
   };
 
   const onCountSub = () => {
-    if (value >= 1) setValue((prev) => prev - 1);
+    setValue((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
   return (
