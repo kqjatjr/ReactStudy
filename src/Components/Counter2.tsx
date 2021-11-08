@@ -3,11 +3,11 @@ import { useState } from "react";
 const Counter2 = () => {
   const [value, setValue] = useState<number>(0);
 
-  const handleCountAdd = () => {
+  const onCountAdd = () => {
     setValue((prev) => prev + 1);
   };
 
-  const handleCountSub = () => {
+  const onCountSub = () => {
     if (value >= 1) setValue((prev) => prev - 1);
   };
 
@@ -16,8 +16,8 @@ const Counter2 = () => {
       <p>
         현재 카운터 값은 <b>{value}</b>입니다.
       </p>
-      <button onClick={handleCountAdd}>+</button>
-      <button onClick={handleCountSub}>-</button>
+      <button onClick={onCountAdd}>+</button>
+      <button onClick={onCountSub}>-</button>
     </div>
   );
 };
