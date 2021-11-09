@@ -8,6 +8,8 @@ import Counter2 from "./Components/Counter2";
 import Info from "./Components/Info";
 import { useState } from "react";
 import Counter3 from "./Components/Counter3";
+import Info2 from "./Components/Info2";
+import Average from "./Components/Average";
 
 function App() {
   const [visible, setVisible] = useState<boolean>(false);
@@ -50,6 +52,12 @@ function App() {
       <br />
       <br />
       <Counter3 />
+      <br />
+      <br />
+      <Info2 />
+      <br />
+      <br />
+      <Average />
     </div>
   );
 }

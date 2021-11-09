@@ -5,6 +5,11 @@ type DemoType = {
   nickname: string;
 };
 
+type Action = {
+  name: string;
+  value: string;
+};
+
 const nameReducer = (state: DemoType, action: Action) => {
   return {
     ...state,
