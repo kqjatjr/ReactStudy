@@ -10,6 +10,7 @@ import { useState } from "react";
 import Counter3 from "./Components/Counter3";
 import Info2 from "./Components/Info2";
 import Average from "./Components/Average";
+import SassComponent from "./Components/SassComponent";
 
 function App() {
   const [visible, setVisible] = useState<boolean>(false);
@@ -58,6 +59,9 @@ function App() {
       <br />
       <br />
       <Average />
+      <br />
+      <br />
+      <SassComponent />
     </div>
   );
 }

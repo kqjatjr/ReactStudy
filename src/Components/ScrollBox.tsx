@@ -14,10 +14,6 @@ const ScrollBox = () => {
     background: "linear-gradient(white, black)",
   };
 
-  const scrollBoxToBottom = () => {
-    const scrollBox = { scrollHeight: Number, clientHeight: Number };
-  };
-
   return (
     <div style={style}>
       <div style={innerStyle} />
